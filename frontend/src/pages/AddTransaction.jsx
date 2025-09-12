@@ -1,6 +1,7 @@
 import { useState } from "react";
 import { useNavigate } from "react-router-dom";
 import TransactionForm from "../components/TransactionForm";
+import { API_URL } from "../config";
 
 function AddTransaction() {
   const navigate = useNavigate();
@@ -9,7 +10,7 @@ function AddTransaction() {
   const handleSubmit = async (data) => {
     setLoading(true);
     try {
-      const res = await fetch("http://localhost:5000/api/transactions", {
+      const res = await fetch(`${API_URL}/transactions`, {
         method: "POST",
         headers: { "Content-Type": "application/json" },
         body: JSON.stringify(data),

@@ -1,5 +1,6 @@
 import { useEffect, useState } from "react";
 import { Link } from "react-router-dom";
+import { API_URL } from "../config";
 
 function Home() {
   const [transactions, setTransactions] = useState([]);
@@ -8,7 +9,7 @@ function Home() {
   useEffect(() => {
     const fetchTransactions = async () => {
       try {
-        const res = await fetch("http://localhost:5000/api/transactions");
+        const res = await fetch(`${API_URL}/transactions`);
         const data = await res.json();
         setTransactions(data);
       } catch (error) {

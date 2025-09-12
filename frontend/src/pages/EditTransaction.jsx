@@ -1,6 +1,7 @@
 import { useState, useEffect } from "react";
 import { useParams, useNavigate } from "react-router-dom";
 import TransactionForm from "../components/TransactionForm";
+import { API_URL } from "../config";
 
 function EditTransaction() {
   const { id } = useParams();
@@ -11,7 +12,7 @@ function EditTransaction() {
   useEffect(() => {
     const fetchTransaction = async () => {
       try {
-        const res = await fetch(`http://localhost:5000/api/transactions/${id}`);
+        const res = await fetch(`${API_URL}/transactions/${id}`);
         const data = await res.json();
         setTransaction(data);
       } catch (err) {
