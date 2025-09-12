@@ -28,7 +28,7 @@ function DeleteTransaction() {
   const handleDelete = async () => {
     setLoading(true);
     try {
-      const res = await fetch(`http://localhost:5000/api/transactions/${id}`, {
+      const res = await fetch(`${API_URL}/transactions/${id}`, {
         method: "DELETE",
       });
 

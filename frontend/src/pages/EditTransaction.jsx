@@ -25,7 +25,7 @@ function EditTransaction() {
   const handleSubmit = async (data) => {
     setLoading(true);
     try {
-      const res = await fetch(`http://localhost:5000/api/transactions/${id}`, {
+      const res = await fetch(`${API_URL}/transactions/${id}`, {
         method: "PUT",
         headers: { "Content-Type": "application/json" },
         body: JSON.stringify(data),
