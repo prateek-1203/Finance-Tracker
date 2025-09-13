@@ -88,7 +88,6 @@ backend/
 
 frontend/
 ├─ src/components/TransactionForm.jsx
-├─ src/components/TransactionList.jsx
 ├─ src/pages/Home.jsx
 ├─ src/pages/AddTransaction.jsx
 ├─ src/pages/EditTransaction.jsx
