@@ -70,7 +70,7 @@ cd frontend
 ```bash
 npm install
 ```
-2. Run development server:
+3. Run development server:
 
 
 ```bash
